@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
+import { assetPath } from "@/data/site-data";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -16,9 +17,9 @@ export const metadata: Metadata = {
   title: "Maulana Transport Jogja | Rental Mobil dengan Driver",
   description: "Sewa mobil dengan driver, city tour, perjalanan dinas, dan antar jemput bandara di Yogyakarta.",
   icons: {
-    icon: "/maulanatranslogo.png",
-    shortcut: "/maulanatranslogo.png",
-    apple: "/maulanatranslogo.png",
+    icon: assetPath("/maulanatranslogo.png"),
+    shortcut: assetPath("/maulanatranslogo.png"),
+    apple: assetPath("/maulanatranslogo.png"),
   },
 };
 

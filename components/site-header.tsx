@@ -5,6 +5,7 @@ import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { assetPath } from "@/data/site-data";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand" href="/" onClick={() => setOpen(false)}>
-          <Image className="brand-logo" src="/maulanatranslogo.png" alt="Maulana Transport" width={45} height={45} priority />
+          <Image className="brand-logo" src={assetPath("/maulanatranslogo.png")} alt="Maulana Transport" width={45} height={45} priority />
           <span className="brand-copy"><span className="brand-name">Maulana Transport</span><span className="brand-meta">Jogja Car Rental Service</span></span>
         </Link>
         <nav className="nav-links" aria-label="Navigasi utama">
