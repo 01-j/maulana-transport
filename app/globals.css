@@ -395,17 +395,11 @@ textarea:focus-visible, summary:focus-visible {
   .vehicle-card-1 .vehicle-card-content { background: var(--paper); }
 }
 
-/* Oversized brand watermark stays behind each section's content. */
+/* Visible two-line signature below every section's content. */
 section { position: relative; isolation: isolate; overflow: hidden; }
-section::before, section::after { position: absolute; left: 50%; width: 80%; pointer-events: none; text-align: center; white-space: nowrap; font-weight: 850; line-height: .82; opacity: .3; transform: translateX(-50%) rotate(-8deg); }
-section::before { content: "WEB DEVELOPMENT"; top: 58%; z-index: 0; color: var(--blue); font-size: clamp(28px, 4vw, 64px); letter-spacing: .08em; }
-section::after { content: "SOYUZ"; top: 32%; z-index: 0; color: var(--ink-deep); font-size: clamp(100px, 16vw, 260px); letter-spacing: -.08em; }
+section::before { display: none; }
+section::after { content: "SOYUZ\A WEB DEVELOPMENT"; display: block; width: 80%; margin: clamp(38px, 6vw, 78px) auto 0; color: var(--blue); font-size: clamp(26px, 4vw, 58px); font-weight: 850; letter-spacing: .08em; line-height: 1.05; pointer-events: none; text-align: center; white-space: pre; }
 section > * { position: relative; z-index: 1; }
 .hero > .hero-visual { z-index: -1; }
 .hero::before, .page-hero::before { display: none; }
-.hero::after, .page-hero::after { display: none; }
-
-@media (max-width: 680px) {
-  section::before { top: 57%; font-size: clamp(20px, 5.8vw, 34px); }
-  section::after { top: 32%; font-size: clamp(76px, 25vw, 146px); }
-}
+.hero::after, .page-hero::after { position: static; right: auto; bottom: auto; display: block; width: 80%; height: auto; border: 0; border-radius: 0; box-shadow: none; color: #79b9ef; }
