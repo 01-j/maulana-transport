@@ -2,11 +2,17 @@
 
 import { CheckCircle, PaperPlaneTilt } from "@phosphor-icons/react";
 import { FormEvent, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { fleet, services, whatsappNumber } from "@/data/site-data";
 
 type BookingFormProps = { initialVehicle?: string; initialService?: string; initialDate?: string; initialArea?: string };
 
 export function BookingForm({ initialVehicle = "", initialService = "", initialDate = "", initialArea = "" }: BookingFormProps) {
+  const searchParams = useSearchParams();
+  initialVehicle = searchParams.get("vehicle") ?? initialVehicle;
+  initialService = searchParams.get("service") ?? initialService;
+  initialDate = searchParams.get("date") ?? initialDate;
+  initialArea = searchParams.get("area") ?? initialArea;
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
