@@ -346,8 +346,8 @@ textarea:focus-visible, summary:focus-visible {
   .hero-actions .button { flex: 1 1 170px; }
   .hero-stamp { flex-wrap: wrap; gap: 10px 14px; margin-top: 46px; }
   .hero-stamp span { font-size: 9px; }
-  .quick-booking { margin-top: -1px; background: var(--white); }
-  .quick-card { display: block; box-shadow: none; border: 0; }
+  .quick-booking { margin-top: 0; padding: 28px 0 0; background: var(--paper); }
+  .quick-card { display: block; padding: 22px 18px 24px; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow-tight); }
   .quick-card-heading { padding: 0 0 16px; }
   .quick-card-heading strong { font-size: 16px; }
   .quick-status { font-size: 0; }
@@ -393,7 +393,7 @@ textarea:focus-visible, summary:focus-visible {
   .map-frame { min-height: 340px; }
   .whatsapp-float { right: 14px; bottom: 14px; }
   .whatsapp-float span { display: none; }
-  section::after { width: calc(100% - 32px); margin: 44px auto 0; font-size: clamp(15px, 4.5vw, 22px); letter-spacing: .04em; text-align: center; }
+  section::after { left: 0; width: calc(100% - 32px); margin: 44px auto 0; font-size: clamp(15px, 4.5vw, 22px); letter-spacing: .04em; text-align: center; }
   .hero::after { right: 0; bottom: 18px; left: 0; width: calc(100% - 32px); margin: 0 auto; font-size: clamp(13px, 3.8vw, 18px); text-align: center; transform: none; }
 }
 
@@ -406,6 +406,8 @@ textarea:focus-visible, summary:focus-visible {
   .hero-route-card { right: 12px; bottom: 86px; min-width: 180px; }
   .display { font-size: clamp(42px, 13vw, 56px); }
   .footer-grid { gap: 28px 14px; }
+  .quick-booking { padding-top: 22px; }
+  .quick-card { padding: 18px 14px 20px; }
   .booking-form { padding: 20px 14px; }
 }
 
