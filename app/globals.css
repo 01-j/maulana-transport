@@ -336,7 +336,7 @@ textarea:focus-visible, summary:focus-visible {
   .hero::before { background: radial-gradient(circle at 50% 14%, rgba(2, 100, 195, .4), transparent 38%), var(--ink-deep); }
   .hero-visual { inset: 0; }
   .hero-scrim { background: linear-gradient(180deg, rgba(1, 59, 116, .08), rgba(1, 59, 116, .97) 76%); }
-  .hero-route-card { right: 16px; bottom: 92px; min-width: 195px; padding: 13px 14px; }
+  .hero-route-card { display: none; }
   .hero-inner { padding: 106px 0 188px; }
   .hero-meta-line { gap: 10px; margin-bottom: 22px; font-size: 9px; }
   .hero-meta-line span + span { padding-left: 10px; }
@@ -403,7 +403,6 @@ textarea:focus-visible, summary:focus-visible {
   .section-sm { padding: 44px 0 52px; }
   .hero { min-height: 780px; }
   .hero-inner { padding-top: 86px; }
-  .hero-route-card { right: 12px; bottom: 86px; min-width: 180px; }
   .display { font-size: clamp(42px, 13vw, 56px); }
   .footer-grid { gap: 28px 14px; }
   .quick-booking { padding-top: 22px; }
