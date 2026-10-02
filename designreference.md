@@ -21,7 +21,7 @@ The structure flows from a photographic hero into an overlaid quick-booking card
 
 ## Navigation
 
-Sticky header with a height of 78px, 92% white/paper background and backdrop-blur(14px), bottom border 1px #dbe4ec. Brand row shows the logo image with name "Maulana Transport" and meta "Jogja · Since 2012". Links: 13px weight 700 in slate (#52617a) with a 0.2s color transition to blue on hover, gap 28px. Primary "Pesan sekarang" button is blue (#0264c3) with white text. On mobile the links collapse into a hamburger-toggled drawer.
+Sticky header with a height of 78px, 92% white/paper background and backdrop-blur(14px), bottom border 1px #dbe4ec. Brand row shows the logo image with name "Maulana Transport" and meta "JOGJA CAR RENTAL SERVICE". Links: 13px weight 700 in slate (#52617a) with a 0.2s color transition to blue on hover, gap 28px. Primary "Pesan sekarang" button is blue (#0264c3) with white text. On mobile the links collapse into a hamburger-toggled drawer.
 
 ## Hero Section
 
