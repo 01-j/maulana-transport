@@ -398,7 +398,7 @@ textarea:focus-visible, summary:focus-visible {
 /* Visible two-line signature below every section's content. */
 section { position: relative; isolation: isolate; overflow: hidden; }
 section::before { display: none; }
-section::after { content: "SOYUZ\A WEB DEVELOPMENT"; display: block; width: 80%; margin: clamp(38px, 6vw, 78px) auto 0; color: var(--blue); font-size: clamp(26px, 4vw, 58px); font-weight: 850; letter-spacing: .08em; line-height: 1.05; pointer-events: none; text-align: center; white-space: pre; }
+section::after { content: "SOYUZ WEB DEVELOPMENT"; display: block; width: 80%; margin: clamp(38px, 6vw, 78px) auto 0; color: var(--blue); font-size: clamp(26px, 4vw, 58px); font-weight: 850; letter-spacing: .08em; line-height: 1.05; pointer-events: none; text-align: center; white-space: nowrap; }
 section > * { position: relative; z-index: 1; }
 .hero > .hero-visual { z-index: -1; }
 .hero::before, .page-hero::before { display: none; }
