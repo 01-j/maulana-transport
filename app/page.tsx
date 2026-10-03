@@ -2,15 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { QuickBooking } from "@/components/quick-booking";
+import { HeroReviews } from "@/components/hero-reviews";
 import { assetPath, fleet, services } from "@/data/site-data";
 
 export default function HomePage() {
   return <>
     <section className="hero">
-      <div className="hero-visual" aria-hidden="true">
+      <div className="hero-visual">
         <Image className="hero-image" src={assetPath("/yogyakarta-nights.png")} alt="" fill priority sizes="(max-width: 680px) 100vw, 57vw" />
         <div className="hero-scrim" />
-        <div className="hero-route-card"><span>Rute utama</span><strong>Jogja <i /> tujuan Anda</strong><small>Konfirmasi langsung via WhatsApp</small></div>
+        <HeroReviews />
       </div>
       <div className="hero-inner">
         <div className="hero-copy">

@@ -103,11 +103,22 @@ textarea:focus-visible, summary:focus-visible {
 .hero-visual { position: absolute; inset: 0 0 0 43%; z-index: -1; overflow: hidden; }
 .hero-image { object-fit: cover; object-position: center; opacity: .92; }
 .hero-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink-deep) 0%, rgba(1, 59, 116, .72) 35%, rgba(1, 59, 116, .08) 100%); }
-.hero-route-card { position: absolute; right: clamp(24px, 5vw, 76px); bottom: 54px; display: grid; gap: 7px; min-width: 218px; padding: 16px 17px; border: 1px solid var(--glass-border); border-left: 2px solid #79b9ef; color: var(--white); background: var(--glass-dark); box-shadow: 0 16px 35px rgba(1, 25, 58, .2), 0 1px 0 rgba(255, 255, 255, .16) inset; backdrop-filter: blur(16px) saturate(130%); -webkit-backdrop-filter: blur(16px) saturate(130%); }
-.hero-route-card span, .hero-route-card small { color: #a9c5df; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-.hero-route-card strong { display: flex; align-items: center; gap: 9px; font-size: 15px; letter-spacing: -.02em; }
-.hero-route-card strong i { width: 24px; height: 1px; display: inline-block; background: #79b9ef; }
-.hero-route-card small { color: #d2e1ef; font-size: 11px; letter-spacing: 0; text-transform: none; }
+.hero-reviews { position: absolute; right: clamp(24px, 5vw, 76px); bottom: 54px; z-index: 2; width: min(315px, calc(100% - 48px)); padding: 16px 17px 13px; border: 1px solid var(--glass-border); border-left: 2px solid #79b9ef; color: var(--white); background: var(--glass-dark); box-shadow: 0 16px 35px rgba(1, 25, 58, .2), 0 1px 0 rgba(255, 255, 255, .16) inset; backdrop-filter: blur(16px) saturate(130%); -webkit-backdrop-filter: blur(16px) saturate(130%); touch-action: pan-y; user-select: none; }
+.hero-review-topline, .hero-review-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.hero-review-topline { color: #a9c5df; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.hero-review-content { min-height: 126px; padding-top: 13px; }
+.hero-review-content strong { display: block; overflow: hidden; font-size: 16px; letter-spacing: -.03em; text-overflow: ellipsis; white-space: nowrap; }
+.hero-review-rating { display: flex; align-items: center; gap: 7px; margin-top: 5px; color: #d2e1ef; font-size: 10px; }
+.hero-review-rating > span:last-child { display: inline-flex; gap: 2px; color: #ffd166; }
+.hero-review-rating svg { width: 11px; height: 11px; }
+.hero-review-content p { margin: 10px 0 0; color: #e5eef7; font-size: 12px; line-height: 1.5; }
+.hero-review-controls { padding-top: 11px; border-top: 1px solid rgba(255, 255, 255, .16); }
+.hero-review-dots { display: flex; align-items: center; gap: 5px; }
+.hero-review-dots button { width: 5px; height: 5px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .38); cursor: pointer; }
+.hero-review-dots button.is-active { width: 17px; border-radius: 4px; background: #79b9ef; }
+.hero-review-arrows { display: flex; gap: 5px; }
+.hero-review-arrows button { display: grid; place-items: center; width: 26px; height: 26px; padding: 0; border: 1px solid rgba(255, 255, 255, .26); color: var(--white); background: transparent; cursor: pointer; }
+.hero-review-arrows button:hover { border-color: var(--white); background: rgba(255, 255, 255, .12); }
 .hero-inner { position: relative; z-index: 1; width: min(1200px, calc(100% - 48px)); margin: 0 auto; padding: 92px 0 96px; }
 .hero-copy { width: min(600px, 100%); }
 .hero-meta-line { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 28px; color: #a9c5df; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
@@ -336,7 +347,7 @@ textarea:focus-visible, summary:focus-visible {
   .hero::before { background: radial-gradient(circle at 50% 14%, rgba(2, 100, 195, .4), transparent 38%), var(--ink-deep); }
   .hero-visual { inset: 0; }
   .hero-scrim { background: linear-gradient(180deg, rgba(1, 59, 116, .08), rgba(1, 59, 116, .97) 76%); }
-  .hero-route-card { display: none; }
+  .hero-reviews { right: 16px; bottom: 24px; left: 16px; width: auto; }
   .hero-inner { padding: 106px 0 188px; }
   .hero-meta-line { gap: 10px; margin-bottom: 22px; font-size: 9px; }
   .hero-meta-line span + span { padding-left: 10px; }
@@ -416,12 +427,12 @@ textarea:focus-visible, summary:focus-visible {
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .site-header, .quick-card, .hero-route-card, .vehicle-card-1 .vehicle-card-content, .booking-form {
+  .site-header, .quick-card, .hero-reviews, .vehicle-card-1 .vehicle-card-content, .booking-form {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
   .site-header, .quick-card, .booking-form { background: var(--white); }
-  .hero-route-card { background: var(--ink); }
+  .hero-reviews { background: var(--ink); }
   .vehicle-card-1 .vehicle-card-content { background: var(--paper); }
 }
 
